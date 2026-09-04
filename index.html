@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Garden watering dashboard</title>
+<title>Bunyag</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+ 
 <div class="wrap">
   <header>
-    <h1>Watering dashboard</h1>
+    <h1>Bunyag</h1>
     <div class="conn"><span class="dot" id="connDot"></span><span id="connText">Connecting…</span></div>
   </header>
-
+ 
   <div class="grid">
     <div class="card">
       <h2>Soil moisture</h2>
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="card">
       <h2>Controls</h2>
       <div class="field toggle-row">
@@ -60,16 +60,63 @@
       </div>
       <button class="primary" id="manualBtn">Water now</button>
     </div>
-
+ 
+    <div class="card">
+      <h2>Watering stats</h2>
+      <div class="stat-row">
+        <div>
+          <div class="stat-label">Last watered</div>
+          <div class="stat-value" id="lastWateredVal">--</div>
+        </div>
+        <div>
+          <div class="stat-label">Waterings today</div>
+          <div class="stat-value" id="wateringsTodayVal">--</div>
+        </div>
+        <div>
+          <div class="stat-label">Total logged</div>
+          <div class="stat-value" id="wateringsTotalVal">--</div>
+        </div>
+      </div>
+    </div>
+ 
     <div class="card chart-card">
       <h2>Moisture history</h2>
       <div id="chartHolder"><p class="chart-empty">Waiting for readings…</p></div>
     </div>
+ 
+    <div class="card chart-card">
+      <h2>Records</h2>
+      <div class="table-controls">
+        <select id="rangeFilter">
+          <option value="1">Last hour</option>
+          <option value="24" selected>Last 24 hours</option>
+          <option value="168">Last 7 days</option>
+          <option value="0">All time</option>
+        </select>
+        <label class="pump-only">
+          <input type="checkbox" id="pumpOnlyFilter">
+          Waterings only
+        </label>
+        <span class="row-count" id="rowCount"></span>
+      </div>
+      <div class="table-scroll">
+        <table id="recordsTable">
+          <thead>
+            <tr>
+              <th data-key="timestamp">Time</th>
+              <th data-key="moisture">Moisture</th>
+              <th data-key="pumpOn">Pump</th>
+            </tr>
+          </thead>
+          <tbody id="recordsBody"></tbody>
+        </table>
+      </div>
+    </div>
   </div>
-
+ 
   <footer>Auto watering system &middot; live via Firebase</footer>
 </div>
-
+ 
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
