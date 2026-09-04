@@ -1,13 +1,14 @@
 // Fill these in from Firebase Console > Project settings > General > Your apps > SDK setup and configuration
 // This is safe to expose publicly (it's not a secret) as long as your Realtime Database rules are set correctly.
 const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_WEB_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBjPnSc0PrCyhXly2H-MsGh-Dpjle8kJlk",
+  authDomain: "autowatering-sys.firebaseapp.com",
+  databaseURL: "https://autowatering-sys-default-rtdb.firebaseio.com",
+  projectId: "autowatering-sys",
+  storageBucket: "autowatering-sys.firebasestorage.app",
+  messagingSenderId: "540491278021",
+  appId: "1:540491278021:web:4e0e47bd0e4a433d52b2ac",
+  measurementId: "G-QFQN2KKD0E"
 };
 
 // Same email/password you registered in Firebase Authentication and used in the ESP32 firmware,
