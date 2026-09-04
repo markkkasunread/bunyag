@@ -14,6 +14,6 @@ const firebaseConfig = {
 // Same email/password you registered in Firebase Authentication and used in the ESP32 firmware,
 // OR set up anonymous auth (simpler) - see README for both options.
 const DASHBOARD_LOGIN = {
-  email: "device@yourproject.com",
-  password: "choose_a_strong_password"
+  email: "bunyag@gmail.com",
+  password: "bunyag123"
 };
